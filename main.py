@@ -70,7 +70,7 @@ diagnosis = ctrl.Consequent(y_diagnosis, 'diagnosis')
 
 # Задання функцій належності
 temp['low'] = fuzz.trapmf(temp.universe, [29.5, 29.5, 35.5, 36.6])
-temp['medium'] = fuzz.trimf(temp.universe, [35.5, 36.6, 37.2])
+temp['mild'] = fuzz.trimf(temp.universe, [35.5, 36.6, 37.2])
 temp['high'] = fuzz.trapmf(temp.universe, [36.6, 37.2, 46.5, 46.5])
 
 cough['none'] = fuzz.trapmf(cough.universe, [0, 0, 4, 5])
@@ -92,7 +92,7 @@ diagnosis['high'] = fuzz.trapmf(diagnosis.universe, [6, 7, 8, 9])
 diagnosis['very_high'] = fuzz.trimf(diagnosis.universe, [9, 10, 10])
 
 # Побудова графіків для кожної змінної
-plot_membership_function(x_temp, [temp['low'].mf, temp['medium'].mf, temp['high'].mf], ['Low', 'Medium', 'High'],
+plot_membership_function(x_temp, [temp['low'].mf, temp['mild'].mf, temp['high'].mf], ['Low', 'Medium', 'High'],
                          'Temperature')
 plot_membership_function(x_cough, [cough['none'].mf, cough['mild'].mf, cough['severe'].mf], ['None', 'Mild', 'Severe'],
                          'Cough')
