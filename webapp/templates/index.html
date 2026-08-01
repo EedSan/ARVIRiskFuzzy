@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="pomodoro-section">
+            <h2>What's your focus?</h2>
+            <input type="text" id="sessionName" placeholder="Session Name">
+            <div id="pomodoro-timer">
+                <span id="minutes">25</span>:<span id="seconds">00</span>
+            </div>
+            <div class="controls">
+                <button onclick="startSession()">Start</button>
+                <button onclick="pauseSession()">Pause</button>
+                <button onclick="stopSession()">Stop</button>
+            </div>
+        </div>
+        <div class="calendar-section">
+            <h2>Your Calendar</h2>
+            <p>Apple Calendar view would be here.</p>
+            <!-- Placeholder for Calendar -->
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
